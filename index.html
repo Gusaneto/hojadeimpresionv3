@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080908">
+  <title>Impresión Gusaniza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="brand-mark">🐛</div>
+      <div>
+        <h1>Impresión <span>Gusaniza</span></h1>
+        <p>Prepara tus imágenes para impresión en segundos.</p>
+      </div>
+    </header>
+
+    <main class="card">
+      <section class="controls">
+        <div class="upload-area">
+          <input id="fileInput" type="file" accept="image/*" multiple hidden>
+          <button id="uploadBtn" class="btn primary">📷 Subir imágenes</button>
+          <p>Máximo 6 imágenes · JPG, PNG, WEBP, etc.</p>
+          <div id="fileCount" class="count">0 / 6 imágenes</div>
+        </div>
+
+        <div class="info">
+          <div><strong>Base:</strong> 65 × 85 cm</div>
+          <div><strong>Cada imagen:</strong> 15.80 × 24.27 cm</div>
+          <div><strong>Separación:</strong> 3 cm horizontal · 8 cm vertical</div>
+          <div><strong>Salida:</strong> JPG · 300 DPI</div>
+        </div>
+      </section>
+
+      <section class="preview-section">
+        <div class="section-title">
+          <h2>Vista previa</h2>
+          <span id="status">Esperando imágenes</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="previewCanvas"></canvas>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="downloadBtn" class="btn download" disabled>⬇ Descargar JPG</button>
+        <button id="clearBtn" class="btn secondary" disabled>Limpiar</button>
+      </section>
+    </main>
+
+    <footer><span>Gusaniza</span> · Preparado para impresión</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
